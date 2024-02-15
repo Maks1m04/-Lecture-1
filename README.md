@@ -111,3 +111,414 @@ Operator	Description	Example
 >=	Greater than or equal to	20>=10 = true
 <	Less than	20<10 = false
 <=	Less than or equal to	20<=10 = false
+
+Conditional statements in JavaScript allow you to execute specific blocks of code based on conditions. If the condition meets then a particular block of action will be executed otherwise it will execute another block of action that satisfies that particular condition.
+
+There are several methods that can be used to perform Conditional Statements in JavaScript.
+
+if Statement
+if-else Statement
+else if Statement
+switch Statement
+Ternary Operator
+We will explore all the above methods along with their basic implementation with the help of examples.
+
+JavaScript if Statement
+The if statement is used to evaluate a particular condition. If the condition holds true, the associated code block is executed.
+
+
+Syntax:
+
+if ( condition ) {
+    // If the condition is met, 
+    //code  will get executed.
+}
+Example: In this example, we are using the if statement to find given number is even or odd.
+
+Javascript
+   
+let num = 20; 
+  
+if (num % 2 === 0) { 
+    console.log("Given number is even number."); 
+} 
+  
+if (num % 2 !== 0) { 
+    console.log("Given number is odd number."); 
+};
+
+Output
+Given number is even number.
+JavaScript if-else Statement
+The if-else statement will perform some action for a specific condition. Here we are using the else statement in which the else statement is written after the if statement and it has no condition in their code block.
+
+Syntax:
+
+if (condition1) {
+    // Executes when condition1 is true
+    if (condition2) {
+        // Executes when condition2 is true
+    }
+}
+Example: In this example, we are using the above-explained approach.
+
+Javascript
+   
+let age = 25; 
+  
+if (age >= 18) { 
+    console.log("You are eligible of driving licence") 
+} else { 
+    console.log("You are not eligible for driving licence") 
+};
+
+Output
+you are eligible of driving licence
+JavaScript else if Statement
+The else if statement in JavaScript allows handling multiple possible conditions and outputs, evaluating more than two options based on whether the conditions are true or false.
+
+Syntax:
+
+if (1st condition) {
+    // Code for 1st condition
+} else if (2nd condition) {
+    // ode for 2nd condition
+} else if (3rd condition) {
+    // Code for 3rd condition
+} else {
+    //  ode that will execute if all 
+    // above conditions are false
+}
+Example: In this example, we are using the above-explained approach.
+
+Javascript
+   
+const num = 0; 
+  
+if (num > 0) { 
+    console.log("Given number is positive."); 
+} else if (num < 0) { 
+    console.log("Given number is negative."); 
+} else { 
+    console.log("Given number is zero."); 
+};
+
+Output
+Given number is zero.
+JavaScript Switch Statement (JavaScript Switch Case)
+As the number of conditions increases, you can use multiple else-if statements in JavaScript. but when we dealing with many conditions, the switch statement may be a more preferred option.
+
+Syntax:
+
+switch (expression) {
+    case value1:
+        statement1;
+        break;
+    case value2:
+        statement2;
+        break;
+    . . .
+    case valueN:
+        statementN;
+        break;
+    default:
+        statementDefault;
+};
+Example: In this example, we find a branch name Based on the student’s marks, this switch statement assigns a specific engineering branch to the variable Branch. The output displays the student’s branch name,
+
+Javascript
+   
+const marks = 85; 
+  
+let Branch; 
+  
+switch (true) { 
+    case marks >= 90: 
+        Branch = "Computer science engineering"; 
+        break; 
+    case marks >= 80: 
+        Branch = "Mechanical engineering"; 
+        break; 
+    case marks >= 70: 
+        Branch = "Chemical engineering"; 
+        break; 
+    case marks >= 60: 
+        Branch = "Electronics and communication"; 
+        break; 
+    case marks >= 50: 
+        Branch = "Civil engineering"; 
+        break; 
+    default: 
+        Branch = "Bio technology"; 
+        break; 
+} 
+  
+console.log(`Student Branch name is : ${Branch}`);
+
+Output
+Student Branch name is : Mechanical engineering
+JavaScript Ternary Operator ( ?: )
+The conditional operator, also referred to as the ternary operator (?:), is a shortcut for expressing conditional statements in JavaScript.
+
+Syntax:
+
+condition ? value if true : value if false
+Example: In this example, we use the ternary operator to check if the user’s age is 18 or older. It prints eligibility for voting based on the condition.
+
+Javascript
+   
+let age = 21; 
+  
+const result = 
+    (age >= 18) ? "You are eligible to vote."
+        : "You are not eligible to vote."; 
+  
+console.log(result);
+
+Output
+You are eligible to vote.
+
+JavaScript for Loop
+A for loop is used when you know how many times you need to repeat a certain block of code. It takes three statements.
+
+Initialization statement
+Condition Statement
+Increment statement.
+Example: This example shows the use of a for loop.
+
+   
+for (let i = 0; i < 4; i++) {
+ console.log(i);
+}
+
+Output
+0
+1
+2
+3
+JavaScript while Loop
+A while loop is used when you don’t know how many times you need to repeat a block of code, but you know the condition that will end the loop.
+
+Example: This example shows the use of a while loop.
+
+   
+let i = 0;
+while (i < 6) {
+  console.log(i);
+  i++;
+}
+
+Output
+0
+1
+2
+3
+4
+5
+JavaScript do-while Loop
+A do-while loop is similar to a while loop, but the block of code is executed at least once, even if the condition is false.
+
+Example: This example shows the use of do-while loop.
+
+   
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 6);
+
+Output
+0
+1
+2
+3
+4
+5
+JavaScript for-in Loop
+A for-in loop is used to loop through the properties of an object.
+
+Example: This example shows the use of for-in loop.
+
+   
+const obj = {a: 1, b: 4, c: 7};
+ 
+for (let prop in obj) {
+  console.log(prop + ': ' + obj[prop]);
+}
+
+Output
+a: 1
+b: 4
+c: 7
+JavaScript for-of Loop
+A for-of loop is used to loop through the values of an iterable object (such as an array.
+
+Example: This example shows the use of for-of loop.
+
+   
+const arr = [1, 2, 3];
+ 
+for (let val of arr) {
+  console.log(val);
+}
+
+Output
+1
+2
+3
+JavaScript forEach loop
+A forEach loop is a method on arrays that executes a function for each element in the array.
+
+Example: This example shows the use of forEach loop.
+
+   
+const arr = [1, 2, 3];
+arr.forEach(val => console.log(val));
+
+Output
+1
+2
+3
+JavaScript map Loop
+A map loop is a method on arrays that creates a new array by executing a function on each element in the array.
+
+Example: This example shows the use of map loop.
+
+   
+const arr = [1, 2, 3];
+const newArr = arr.map(val => val * 2);
+console.log(newArr);
+
+Output
+[ 2, 4, 6 ]
+JavaScript is a widely-used programming language that is essential for web development. Its ability to run on both client-side and server-side makes it a versatile tool that has become an essential tool for web developers.
+
+JavaScript is a high-level, interpreted language used on the client side, meaning it runs in the user's web browser. You can use it to create web and mobile applications, browser extensions, and other software.
+
+It is supported by all major web browsers, and it is an essential technology for front-end web development.
+
+Functions are one of the building blocks of JavaScript programming for creating web applications.
+
+You can think of functions as a way to group a set of instructions together and execute them as a single unit.
+
+In this article, we will explore the basics of functions in JavaScript and how you can use them effectively in your code.
+
+Function Syntax
+A function is a block of code that performs a specific task. JavaScript functions are basically used to encapsulate logic, making that code more reusable and easier to understand.
+
+The syntax for creating a function in JavaScript is quite simple. Functions can take input in the form of parameters and can return a value or output.
+
+Functions help you organize and structure your code. They also allow for code reuse and make it easier to understand and maintain large codebases.
+
+How to Write a Function in JavaScript
+You start by using the keyword "function," followed by the function name and a set of parentheses.
+
+Inside the parentheses, you can specify any input parameters that the function will take in, also known as arguments. The arguments are usually optional.
+
+Next, you include a block of code inside curly braces that defines the instructions the function will execute when it is called.
+
+Here is an example of a basic function that takes in two numbers and returns their sum:
+
+//index.js
+
+function addNumbers(a, b) {
+  return a + b;
+}
+The function above, named "addNumbers," takes in two parameters, a and b. The code inside the function body simply adds these two parameters together and returns the result.
+
+How to Declare a Function in JavaScript
+Apart from the regular way of declaring a function as seen above, you can also define functions using function expressions or arrow functions.
+
+The arrow function syntax is a shorthand version of the regular function syntax. Here is the same function as above, but written with an arrow function:
+
+//index.js
+const addNumbers = (a, b) => a + b;
+In the example above, the function is assigned to the variable addNumbers. The arrow => is used to define the function, and the code inside the curly braces is the body of the function.
+
+Function expressions in JavaScript are similar to regular function declarations. The difference between them is that the function expression is always assigned to a variable. Here is an example of a function expression:
+
+//index.js
+let multiplyNumbers = function(a, b) {
+    return a * b;
+}
+In this example, the function is assigned to the variable multiplyNumbers. This variable can be used to call the function, just like a regular function.
+
+How to Use Callback Functions
+Functions can also be passed as arguments to other functions, known as callback functions. Here is an example of a callback function being used to log the result of a multiplication operation:
+
+//index.js
+
+function multiplyByTwo(n, callback) {
+  var result = n * 2;
+  callback(result);
+}
+
+function logResult(result) {
+  console.log(result);
+}
+
+multiplyByTwo(5, logResult); // logs 10
+In this example, the multiplyByTwo function takes two arguments: a number and a callback function. The function multiplies the number by 2 and then invokes the callback function, passing the result as an argument. The logResult function is then executed, which logs the result to the console.
+
+How to Use Default Parameters
+JavaScript functions also have a feature called default parameters. They allow you to set default values for parameters in case they are not passed when the function is called.
+
+This is helpful in situations where you want to provide a default value for a parameter in case it is not passed. Here is an example:
+
+//index.js
+
+function greet(name = "John Doe") {
+    console.log(`Hello, ${name}!`);
+}
+
+greet(); // Hello, John Doe!
+greet("Jane Smith"); // Hello, Jane Smith
+In this example, the greet function takes in a single parameter name, which is set to "John Doe" by default. If the function is called without passing any arguments, it will use the default value "John Doe". But if an argument is passed, it will use that value instead.
+
+How to Use the Constructor Function
+JavaScript has a special type of function called a constructor function, which is used to create objects.
+
+You define a constructor function using the keyword "function" followed by a name that starts with an uppercase letter (called using the "new" keyword).
+
+For example, the following code defines a constructor function named "Person" that creates an object with a name and age property:
+
+//index.js
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+let person = new Person("John Smith", 30);
+console.log(person.name); // Output: "John Smith"
+console.log(person.age); 
+How to Use Closures
+A closure is a function that has access to variables in its parent scope, even after the parent function has returned. This allows for variables to be preserved between function calls, and it is a powerful feature that allows for more advanced programming patterns such as object-oriented programming.
+
+Here's an example of a closure function that creates a counter:
+
+//index.js
+
+function createCounter() {
+  let count = 0;
+  return function() {
+    return count++;
+  }
+}
+const myCounter = createCounter();
+console.log(myCounter()); // Output: 0
+console.log(myCounter()); /
+How to Use Higher-Order Functions
+Functions can also be passed as arguments to other functions, which is known as a "higher-order" function. For example:
+
+//index.js
+
+function performOperation(a, b, operation) {
+    return operation(a, b);
+}
+
+let result = performOperation(5, 10, addNumbers);
+console.log(result);  // 15
+In this example, the performOperation function takes in three arguments: a, b, and operation.
+
+The operation argument is a function that takes in two arguments and returns a result. In this case, we are passing the addNumbers function as the operation argument, so the result of the performOperation function will be the result of calling the addNumbers function with the arguments a and b.
